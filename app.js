@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://<chatadmin>:<chatadmin>@ds145039.mlab.com:45039/chatdb');
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 var v1 = require('./routes/v1/api');
